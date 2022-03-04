@@ -18,6 +18,21 @@ export class CardFormComponent implements OnInit {
       Validators.minLength(3),
       Validators.maxLength(12),
     ]),
+    cardNumber: new FormControl('', [
+      Validators.required,
+      Validators.minLength(16),
+      Validators.maxLength(16),
+    ]),
+    expiration: new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^(0[1-9]|1[0-2])\/\d{2}$/),
+    ]),
+    securityCode: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(3),
+      Validators.pattern(/[0-9]/),
+    ]),
   });
 
   constructor() {}
@@ -28,4 +43,6 @@ export class CardFormComponent implements OnInit {
     const ctrl = absCtrl as FormControl;
     return ctrl;
   }
+
+  onSubmit() {}
 }

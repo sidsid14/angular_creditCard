@@ -1,6 +1,27 @@
-<form [formGroup]="cardForm">
+<form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
   <app-input
     label="Name"
     [control]="toControl(cardForm.get('name'))"
+  ></app-input
+  ><app-input
+    label="Card Number"
+    [control]="toControl(cardForm.get('cardNumber'))"
+  ></app-input
+  ><app-input
+    label="Expiration (MM/YY)"
+    [control]="toControl(cardForm.get('expiration'))"
+  ></app-input
+  ><app-input
+    label="Security Code"
+    [control]="toControl(cardForm.get('securityCode'))"
   ></app-input>
+  <div>
+    <button
+      [disabled]="cardForm.invalid"
+      class="button is-primary"
+      type="submit"
+    >
+      Submit
+    </button>
+  </div>
 </form>
