@@ -1,5 +1,12 @@
 # CreditCard
 
+This project does the following -
+
+- Make a resuable input component.
+- Input Validations and Input Masking.
+- Reactive Forms handling.
+
+![Screenshot](https://user-images.githubusercontent.com/27942487/156751582-e1d6f4a8-f641-43ea-b50e-01f006e3338e.png)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
 ## Development server
