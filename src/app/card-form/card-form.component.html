@@ -1,1 +1,6 @@
-<p>card-form works!</p>
+<form [formGroup]="cardForm">
+  <app-input
+    label="Name"
+    [control]="toControl(cardForm.get('name'))"
+  ></app-input>
+</form>
